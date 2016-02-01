@@ -34,6 +34,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'angul'
       })
+         .when('/geomap', {
+        templateUrl: 'views/geomap_min.html',
+        controller: 'geoCtrl',
+        controllerAs: 'geomap'
+      })
       .otherwise({
         redirectTo: '/'
       });
