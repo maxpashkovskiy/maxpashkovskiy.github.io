@@ -1,8 +1,0 @@
-{
-  "name": "Auth-Angular",
-  "dependencies": {
-    "jquery": "1.11.2",
-    "angular": "1.4.0",
-    "angular-route": "1.2.20"
-  }
-}
