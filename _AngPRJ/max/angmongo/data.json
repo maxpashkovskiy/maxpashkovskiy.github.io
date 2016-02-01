@@ -1,0 +1,21 @@
+{
+    "_id": {
+        "$oid": "5558ba35e4b07b6ac504be4a"
+    },
+    "users": {
+        "Admin": {
+            "Name": "Anatoliy",
+            "LastName": "Zuhar",
+            "eMail": "zuhar@mail.ru",
+            "age": "27",
+            "DateofBirth": "18-04-1988"
+        },
+        "Redactor": {
+            "Name": "Elena",
+            "LastName": "Zuhar",
+            "eMail": "zuhar_wife@mail.ru",
+            "age": "26",
+            "DateofBirth": "16-03-1989"
+        }
+    }
+}

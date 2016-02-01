@@ -1,0 +1,101 @@
+<div class="jumbotron">
+	<div class="scroll-on-page">
+	  <aside id="scroll-on-page-top">
+	    <a class="scroll-on-page-link" href="#scroll-link-1">Мои первые проекты</a>
+	    <a class="scroll-on-page-link" href="#scroll-link-2">Написание компонентов/скриптов/сниппетов</a>
+	    <a class="scroll-on-page-link" href="#scroll-link-3">Тестовые задания и приложения</a>
+	  </aside>
+
+	  <article>
+	    <section>
+	      <h4 id="scroll-link-1">Мои первые проекты</h4>
+	      <strong>Сайт стоматологического кабинета Chmelitschek.</strong>
+	      <p>Моя первая серьезная работа после долгого перерыва - это верстка для сайта стомотологического кабинета <a href="http://www.dr-chmelitschek.de/">http://www.dr-chmelitschek.de/</a> Был приятно удивлен появившемся технологиям, а именно до неузнаваемости изменившемуся CSS и удобному и быстрому JQuery. О как много я еще не знал :)</p>
+	      <p><img src="../images/Chmelitschek.png" width="300" height="300" alt="..."></p>
+	      	<div class="badges">
+			  <span class="badge">XHTML</span>
+			  <span class="badge-alert">CSS</span>			 
+			  <span class="badge-success">JQuery</span>
+			</div>
+	      
+	      <strong>Сайт цветочного магазина Regio-schnitt-muenchingen.</strong>
+	      <p>Не сложный по функционалу одностраничный сайт для цветочного магазина. Расширенная работа со шрифтами (пришлось прибегуть к помощи "Белки") и не сложный слайдер с кастомным контролом. Можно пройти по <a href="http://www.regio-schnitt-muenchingen.de/">ссылке</a> для его просмотра.<br>
+          </p>
+          <p><img src="../images/RSM.png" width="200" height="364" alt="..."></p>
+          <div class="badges">
+			<span class="badge">HTML</span>
+			<span class="badge-alert">CSS</span>			
+			<span class="badge-success">JQuery</span>
+		  </div>
+          
+	    </section>
+	    <section>
+	      <h4 id="scroll-link-2">Написание компонентов/скриптов/сниппетов</h4>
+	      <strong>StarterKit-SASS-Gulp-AngularJs</strong>
+	      <p>Надоело каждый раз начинать с нуля и собирать все заново. Автоматизировать работу решил, создав стартер проект. Внутри всё, что есть в загаловке. Описание проекта <a href="https://github.com/MaxFlower/StarterKit-SASS-Gulp-AngularJs">тут</a>.</p>
+	      	<div class="badges">
+			  <span class="badge">HTML</span>
+			  <span class="badge-alert">CSS/Sass</span>
+			  <span class="badge-error">Angular</span>
+			  <span class="badge-notice">Gulp</span>			  
+			</div>
+	      <strong>Компонент древовидного меню для Bitrix</strong>
+	      <p>Работая с проектом обнаружил, что решений с компонентом обычного вертикального древовидного меню не так много. Стандартный компонент значительно отличался и по-моему сложнее, чем надо. Для этих случаев включается мозг, заваривается кофе и ... (подготовлю демку и размещу здесь).</p>
+	      <p><img src="../images/West_railroads_2.png" alt="..."></p>
+	        <div class="badges">
+			  <span class="badge">HTML</span>
+			  <span class="badge-alert">CSS</span>
+			  <span class="badge-error">Bitrix</span>
+			  <span class="badge-notice">PHP</span>
+			  <span class="badge-success">JQuery</span>			  
+			</div>
+	      
+	    </section>
+	    <section>
+	      <h4 id="scroll-link-3">Тестовые задания и приложения</h4>
+	      <strong>Приложение для отображения текущей погоды</strong>
+	      <p>Приложение для получения текущей погоды в городах Мира. Добавляем в список города - получаем данные о погодных условиях: температуру, влажность, давление и силу ветра. Обновление погоды производится почасово. Проект на GitHub доступен <a href="https://github.com/MaxFlower/weatherApp">тут</a>. Приложение использует localStorage, поэтому перезагрузка страницы не ведет к потере данных из списка городов. Роутинг через стандартный ngRoute. На основе $resource построенно обращение к внешнему источнику данных. Я использовал сайт <a href="http://openweathermap.org">openweathermap.org</a>.</p>
+	        <div class="badges">
+			  <span class="badge">HTML</span>
+			  <span class="badge-alert">CSS/Sass</span>
+			  <span class="badge-error">Angular</span>
+			  <span class="badge-notice">Grunt</span>			  
+			</div>
+	      <a class="scroll-on-page-link" href="#scroll-on-page-top">Наверх</a>
+	    </section>
+	  </article>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+(function (jQuery) {
+  jQuery.mark = {
+    jump: function (options) {
+      var defaults = {
+        selector: 'a.scroll-on-page-link'
+      };
+      if (typeof options == 'string') {
+        defaults.selector = options;
+      }
+
+      options = jQuery.extend(defaults, options);
+      return jQuery(options.selector).click(function (e) {
+        var jumpobj = jQuery(this);
+        var target = jumpobj.attr('href');
+        var thespeed = 1000;
+        var offset = jQuery(target).offset().top;
+        jQuery('html,body').animate({
+          scrollTop: offset
+        }, thespeed, 'swing');
+        e.preventDefault();
+      });
+    }
+  };
+})(jQuery);
+
+
+jQuery(function(){  
+  jQuery.mark.jump();
+});
+</script>
