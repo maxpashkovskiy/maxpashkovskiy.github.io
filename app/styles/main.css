@@ -1,3 +1,7 @@
+*{margin:0;
+    padding:0;
+  }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -6,7 +10,9 @@
 }
 
 body {
-  padding: 0;
+
+width:1000px;
+margin:0 auto;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -17,6 +23,15 @@ body {
   padding-right: 15px;
 }
 
+#login,#pass,#but{
+  text-align: center;
+  font:20px ToxicPowers;
+  display: block;
+  margin:0 auto;
+}
+#center{
+  text-align: center; 
+}
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
